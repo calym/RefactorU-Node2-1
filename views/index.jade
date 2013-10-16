@@ -1,0 +1,42 @@
+extends layout
+
+block content
+	h1= title
+	p Welcome to #{title}
+
+	h2 Here's an H2
+
+	a(href='http://calymcmorrow.com') Here's a link.
+
+	p Hello, world!
+	div Hi, I'm a div. Check me out, I'm all block level. Yeah.
+		img(src="/images/calyskate.jpg")
+
+	div.yo Yo.
+
+	div#green I AM GREEN.	
+		p 
+		| This is some piped text.
+		| Cupcakes cupcakes cupcakes and tea.
+		| Won't you eat some cupcakes with me.
+
+	input#field(checked=true, disabled=false)	
+
+	div 
+	language = "blaaah"
+		if language == "Jade"
+			p Awesome
+		else
+			p This conditional is totally false.
+
+		mixin book(name,price)
+			li #{name} costs #{price}
+		
+		p MIXIN it up:
+			
+		ul#books
+			+book("Hitchhikers Guide to the Galaxy", "$5.00")
+			+book("The Hobbit", "$6.00")	
+
+
+	
